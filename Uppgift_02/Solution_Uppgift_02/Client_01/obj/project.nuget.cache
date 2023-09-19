@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "u2Xiaqw3/Ms4pV/Ol9lA6eES4Pg8iGBgD7uDv14XpsnuhpdnyN73NYmE5WugMHoDoaruJlrP24fw2p+zR/cypA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Robin\\OneDrive\\Skrivbord\\Nackademin-Kurser\\Datakommunikation_och_säkerhet\\Assignments\\Uppgift_02\\Solution_Uppgift_02\\Client_01\\Client_01.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Robin\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.5\\microsoft.windowsdesktop.app.ref.7.0.5.nupkg.sha512",
+    "C:\\Users\\Robin\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.5\\microsoft.netcore.app.ref.7.0.5.nupkg.sha512",
+    "C:\\Users\\Robin\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.5\\microsoft.aspnetcore.app.ref.7.0.5.nupkg.sha512",
+    "C:\\Users\\Robin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.5\\microsoft.netcore.app.host.win-x64.7.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}
