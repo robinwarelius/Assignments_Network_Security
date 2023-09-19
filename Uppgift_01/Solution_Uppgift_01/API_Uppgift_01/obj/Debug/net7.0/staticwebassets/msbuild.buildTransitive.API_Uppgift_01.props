@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\API_Uppgift_01.props" />
-</Project>
