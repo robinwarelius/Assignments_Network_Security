@@ -8,9 +8,16 @@ namespace API_Uppgift_01.Controllers
     public class HomeController : ControllerBase
     {
         [HttpGet("ReturnSometing")]
-        public async Task <IActionResult> ReturnSomething()
+        public async Task <List<object>> ReturnSomething(string random)
         {
-            return null;
+            var data = new List<object>
+            {
+               new { Id = 1, Namn = "Objekt 1" },
+               new { Id = 2, Namn = "Objekt 2" },
+               new { Id = 3, Namn = "Objekt 3" }
+            };
+
+            return data;
         } 
     }
 }

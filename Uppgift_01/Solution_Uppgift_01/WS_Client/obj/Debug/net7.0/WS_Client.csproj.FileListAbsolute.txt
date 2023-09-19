@@ -1,0 +1,15 @@
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_01\Solution_Uppgift_01\WS_Client\bin\Debug\net7.0\WS_Client.exe
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_01\Solution_Uppgift_01\WS_Client\bin\Debug\net7.0\WS_Client.deps.json
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_01\Solution_Uppgift_01\WS_Client\bin\Debug\net7.0\WS_Client.runtimeconfig.json
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_01\Solution_Uppgift_01\WS_Client\bin\Debug\net7.0\WS_Client.dll
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_01\Solution_Uppgift_01\WS_Client\bin\Debug\net7.0\WS_Client.pdb
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_01\Solution_Uppgift_01\WS_Client\obj\Debug\net7.0\WS_Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_01\Solution_Uppgift_01\WS_Client\obj\Debug\net7.0\WS_Client.AssemblyInfoInputs.cache
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_01\Solution_Uppgift_01\WS_Client\obj\Debug\net7.0\WS_Client.AssemblyInfo.cs
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_01\Solution_Uppgift_01\WS_Client\obj\Debug\net7.0\WS_Client.csproj.CoreCompileInputs.cache
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_01\Solution_Uppgift_01\WS_Client\obj\Debug\net7.0\WS_Client.sourcelink.json
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_01\Solution_Uppgift_01\WS_Client\obj\Debug\net7.0\WS_Client.dll
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_01\Solution_Uppgift_01\WS_Client\obj\Debug\net7.0\refint\WS_Client.dll
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_01\Solution_Uppgift_01\WS_Client\obj\Debug\net7.0\WS_Client.pdb
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_01\Solution_Uppgift_01\WS_Client\obj\Debug\net7.0\WS_Client.genruntimeconfig.cache
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_01\Solution_Uppgift_01\WS_Client\obj\Debug\net7.0\ref\WS_Client.dll

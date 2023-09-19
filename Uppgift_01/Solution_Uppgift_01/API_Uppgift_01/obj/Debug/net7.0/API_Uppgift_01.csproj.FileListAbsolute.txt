@@ -31,3 +31,4 @@ C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säker
 C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_01\Solution_Uppgift_01\API_Uppgift_01\obj\Debug\net7.0\API_Uppgift_01.pdb
 C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_01\Solution_Uppgift_01\API_Uppgift_01\obj\Debug\net7.0\API_Uppgift_01.genruntimeconfig.cache
 C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_01\Solution_Uppgift_01\API_Uppgift_01\obj\Debug\net7.0\ref\API_Uppgift_01.dll
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_01\Solution_Uppgift_01\API_Uppgift_01\obj\Debug\net7.0\API_Uppgift_01.sourcelink.json
