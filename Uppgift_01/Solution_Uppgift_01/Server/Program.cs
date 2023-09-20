@@ -3,7 +3,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text.Json;
 
-
+// Create listener
 var listener = new TcpListener(IPAddress.Any, 12345);
 listener.Start();
 Console.WriteLine($"Server started on port 12345 | Date: {DateTime.Now.ToShortDateString()} | Time: {DateTime.Now.ToShortTimeString()}");
