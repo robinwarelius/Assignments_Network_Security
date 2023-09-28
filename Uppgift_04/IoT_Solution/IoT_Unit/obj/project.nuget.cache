@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "m1ctHp5TWpE3JQgcT3s3jKALfKJ/P0LLvPa4Ex/NN57SDL7+gNAeaE7ejTgtPx87DLSqqK9NmALyM1ODc/QSyw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Robin\\OneDrive\\Skrivbord\\Nackademin-Kurser\\Datakommunikation_och_säkerhet\\Assignments\\Uppgift_04\\IoT_Solution\\IoT_Unit\\IoT_Unit.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Robin\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Robin\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.5\\microsoft.windowsdesktop.app.ref.7.0.5.nupkg.sha512",
+    "C:\\Users\\Robin\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.5\\microsoft.netcore.app.ref.7.0.5.nupkg.sha512",
+    "C:\\Users\\Robin\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.5\\microsoft.aspnetcore.app.ref.7.0.5.nupkg.sha512",
+    "C:\\Users\\Robin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.5\\microsoft.netcore.app.host.win-x64.7.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}
