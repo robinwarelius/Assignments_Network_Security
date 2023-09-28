@@ -14,8 +14,6 @@ namespace IoT_Unit.Utilities
         public static async Task SendAsync(string apiUrl, string secretValue)
         {
             EncryptedDto encryptedDto = Encryption.EncryptData(secretValue);
-            
-
             using (HttpClient httpClient = new HttpClient())
             {            
                 HttpRequestMessage message = new HttpRequestMessage();
