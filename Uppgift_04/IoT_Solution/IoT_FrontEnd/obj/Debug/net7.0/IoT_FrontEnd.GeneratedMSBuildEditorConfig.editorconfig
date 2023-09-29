@@ -16,8 +16,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_04\IoT_Solution\IoT_FrontEnd
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Robin/OneDrive/Skrivbord/Nackademin-Kurser/Datakommunikation_och_säkerhet/Assignments/Uppgift_04/IoT_Solution/IoT_FrontEnd/Views/Auth/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
+[C:/Users/Robin/OneDrive/Skrivbord/Nackademin-Kurser/Datakommunikation_och_säkerhet/Assignments/Uppgift_04/IoT_Solution/IoT_FrontEnd/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Robin/OneDrive/Skrivbord/Nackademin-Kurser/Datakommunikation_och_säkerhet/Assignments/Uppgift_04/IoT_Solution/IoT_FrontEnd/Views/Auth/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Robin/OneDrive/Skrivbord/Nackademin-Kurser/Datakommunikation_och_säkerhet/Assignments/Uppgift_04/IoT_Solution/IoT_FrontEnd/Views/Shared/Error.cshtml]
@@ -26,6 +30,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Robin/OneDrive/Skrivbord/Nackademin-Kurser/Datakommunikation_och_säkerhet/Assignments/Uppgift_04/IoT_Solution/IoT_FrontEnd/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Robin/OneDrive/Skrivbord/Nackademin-Kurser/Datakommunikation_och_säkerhet/Assignments/Uppgift_04/IoT_Solution/IoT_FrontEnd/Views/Unit/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Robin/OneDrive/Skrivbord/Nackademin-Kurser/Datakommunikation_och_säkerhet/Assignments/Uppgift_04/IoT_Solution/IoT_FrontEnd/Views/_ViewImports.cshtml]

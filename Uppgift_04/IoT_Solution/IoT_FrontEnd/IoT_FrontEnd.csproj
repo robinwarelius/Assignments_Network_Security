@@ -6,4 +6,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\microsoft\signalr\dist\browser\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IoT_BackEnd\IoT_BackEnd.csproj" />
+  </ItemGroup>
+
 </Project>

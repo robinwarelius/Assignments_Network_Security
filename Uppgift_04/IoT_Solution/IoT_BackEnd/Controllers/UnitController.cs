@@ -1,4 +1,5 @@
-﻿using IoT_BackEnd.Models;
+﻿using IoT_BackEnd.Hubs;
+using IoT_BackEnd.Models;
 using IoT_BackEnd.Models.Dto;
 using IoT_BackEnd.Services;
 using IoT_BackEnd.Services.IServices;
@@ -6,6 +7,7 @@ using IoT_BackEnd.Utilities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Razor.TagHelpers;
+using Microsoft.AspNetCore.SignalR;
 
 namespace IoT_BackEnd.Controllers
 {
@@ -14,11 +16,16 @@ namespace IoT_BackEnd.Controllers
     public class UnitController : ControllerBase
     {
         private readonly IUnitService _unitService;
-
-        public UnitController(IUnitService unitService)
+        private readonly IHubContext<UnitHub> _hubContext;
+        UnitDto _unitDto;
+       
+        public UnitController(IUnitService unitService, IHubContext<UnitHub> hubContext)
         {
             _unitService = unitService;
+            _hubContext = hubContext;
+            _unitDto = new UnitDto();
         }
+
 
         [HttpPost("CreateUnit")]
         public async Task<IActionResult> CreateUnit([FromBody] EncryptedDto encryptedDto)
@@ -34,12 +41,13 @@ namespace IoT_BackEnd.Controllers
 
                     if (response != null)
                     {
-                        return Ok(response);
+                        _unitDto = await _unitService.GetUnitById(response.UnitId);
+                        await _hubContext.Clients.All.SendAsync("updateUnit", _unitDto.Name, _unitDto.Description, _unitDto.Temperature);
+                        return Ok(response);                                        
                     }         
                 }
 
                 return BadRequest();
-
             }
             catch (Exception ex)
             {

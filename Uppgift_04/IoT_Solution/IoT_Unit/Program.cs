@@ -13,7 +13,7 @@ while (true)
     string secretValue = $"Thermometer,Great For you're House,{random.Next(1, 20).ToString()}";
     string apiUrl = "https://localhost:7080/api/unit/CreateUnit";
     await API_Communication.SendAsync(apiUrl, secretValue);
-    await Task.Delay(10000);
+    await Task.Delay(5000);
 }
 
 

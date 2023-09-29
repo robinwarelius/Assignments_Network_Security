@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace IoT_BackEnd.Controllers
 {
-    [Route("api/Auth")]
+    [Route("api/auth")]
     [ApiController]
     public class AuthController : ControllerBase
     {
