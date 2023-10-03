@@ -1,12 +1,113 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using IoT_FrontEnd.Models.Dtos;
+using IoT_FrontEnd.Services.IServices;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using System.Security.Claims;
+using IoT_FrontEnd.Utilities;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace IoT_FrontEnd.Controllers
 {
     public class AuthController : Controller
     {
-        public IActionResult Index()
+        private readonly IAuthService _authService;
+        private readonly ITokenProvider _tokenProvider;
+        public AuthController(IAuthService authService, ITokenProvider tokenProvider)
+        {
+            _authService = authService;
+            _tokenProvider = tokenProvider;
+        }
+        public async Task<IActionResult> Login()
         {
             return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginRequestDto model)
+        {
+            ResponseDto? response = await _authService.LoginAsync(model);
+
+            if (response.IsSuccess && response.Result != null && ModelState.IsValid)
+            {
+                LoginResponseDto loginResponseDto = JsonConvert.DeserializeObject<LoginResponseDto>(Convert.ToString(response.Result));
+                await SignInUser(loginResponseDto);
+                _tokenProvider.SetToken(loginResponseDto.Token);
+                return RedirectToAction("Index", "Unit");
+            }
+
+            return View(model);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Register()
+        {
+            var roleList = new List<SelectListItem>()
+            {
+                new SelectListItem() {Text = SD.Role_Admin, Value = SD.Role_Admin},
+                new SelectListItem() {Text = SD.Role_Customer, Value = SD.Role_Customer}
+            };
+
+            ViewBag.RoleList = roleList;
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Register(RegistrationRequestDto model)
+        {
+            ResponseDto response = await _authService.RegisterAsync(model);
+
+            if (ModelState.IsValid && response.IsSuccess && response != null)
+            {                             
+                  if (string.IsNullOrEmpty(model.Role))
+                    {
+                        model.Role = SD.Role_Customer;
+                    }
+
+                    ResponseDto assignRole = await _authService.AssignRoleAsync(model);
+
+                    if (assignRole.IsSuccess && assignRole != null)
+                    {                     
+                        return RedirectToAction(nameof(Login));
+                    }              
+            }        
+                                      
+            var roleList = new List<SelectListItem>()
+            {
+                new SelectListItem() {Text = SD.Role_Admin, Value = SD.Role_Admin},
+                new SelectListItem() {Text = SD.Role_Customer, Value = SD.Role_Customer}
+            };
+
+            ViewBag.RoleList = roleList;
+            return View(model);
+        }
+
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync();
+            _tokenProvider.ClearToken();
+            return RedirectToAction("Index", "Unit");
+        }
+      
+        private async Task SignInUser(LoginResponseDto model)
+        {
+            // Read token
+            var handler = new JwtSecurityTokenHandler();
+            var jwt = handler.ReadJwtToken(model.Token);
+
+            // Add claims from token
+            var identity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme);
+            identity.AddClaim(new Claim(JwtRegisteredClaimNames.Email, jwt.Claims.FirstOrDefault(u => u.Type == JwtRegisteredClaimNames.Email).Value));
+            identity.AddClaim(new Claim(JwtRegisteredClaimNames.Sub, jwt.Claims.FirstOrDefault(u => u.Type == JwtRegisteredClaimNames.Sub).Value));
+            identity.AddClaim(new Claim(JwtRegisteredClaimNames.Name, jwt.Claims.FirstOrDefault(u => u.Type == JwtRegisteredClaimNames.Name).Value));
+            identity.AddClaim(new Claim(ClaimTypes.Name, jwt.Claims.FirstOrDefault(u => u.Type == JwtRegisteredClaimNames.Email).Value));
+            identity.AddClaim(new Claim(ClaimTypes.Role, jwt.Claims.FirstOrDefault(u => u.Type == "role").Value));
+
+            // Sign in the user
+            var pricipal = new ClaimsPrincipal(identity);
+            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, pricipal);
         }
     }
 }

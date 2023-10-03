@@ -5,10 +5,6 @@
       "PackagePath": "staticwebassets\\IoT_FrontEnd.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Robin\\OneDrive\\Skrivbord\\Nackademin-Kurser\\Datakommunikation_och_säkerhet\\Assignments\\Uppgift_04\\IoT_Solution\\IoT_FrontEnd\\wwwroot\\css\\site.css",
-      "PackagePath": "staticwebassets\\css\\site.css"
-    },
-    {
       "Id": "C:\\Users\\Robin\\OneDrive\\Skrivbord\\Nackademin-Kurser\\Datakommunikation_och_säkerhet\\Assignments\\Uppgift_04\\IoT_Solution\\IoT_FrontEnd\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },

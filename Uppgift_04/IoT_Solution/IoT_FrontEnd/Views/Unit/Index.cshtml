@@ -2,28 +2,34 @@
     ViewBag.Title = "Unit";
 }
 
-<h1>Enheter</h1>
+@model AdvertDto;
+
+<h1 class="mb-5 mt-5">Units</h1>
 
 <div class="container">
     <div class="row">
-
-        <div class="col-lg-4 text-primary-emphasis">
-            Namn:
+        <div class="col-lg-4">
+            <h5>Name:</h5>
             <p id="nameUnit"></p>
         </div>
 
-        <div class="col-lg-4 text-primary-emphasis">
-            Beskrivning:
+        <div class="col-lg-4">
+            <h5>Description:</h5>
             <p id="descriptionUnit"></p>
         </div>
 
-        <div class="col-lg-4 text-primary-emphasis">
-            Temperatur:
+        <div class="col-lg-4">
+            <h5>Temperature:</h5>
             <p id="temperatureUnit"></p>
-        </div>
-       
-
+        </div>      
     </div>
+
+    @if(Model != null)
+    {
+        <div class="row m-5 img-thumbnail text-center">
+            <img class="" src="@Model.ImageUrl">
+        </div>
+    }
 </div>
 
 

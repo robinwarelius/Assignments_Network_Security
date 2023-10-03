@@ -1,12 +1,33 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using IoT_FrontEnd.Models.Dtos;
+using IoT_FrontEnd.Services.IServices;
+using Microsoft.AspNetCore.Mvc;
 
 namespace IoT_FrontEnd.Controllers
 {
     public class AdminController : Controller
     {
-        public IActionResult Index()
+        private readonly IAdvertService _advertService;
+
+        public AdminController(IAdvertService advertService)
+        {
+            _advertService = advertService;
+        }
+
+        public async Task <IActionResult> Index()
         {
             return View();
+        }
+
+        [HttpPost]
+        public async Task <IActionResult> Index(AdvertDto model)
+        {
+            ResponseDto result = await _advertService.CreateAdvertAsync(model);
+            if (ModelState.IsValid && result != null && result.IsSuccess)
+            {
+                return RedirectToAction("Index", "Admin");
+            }
+      
+            return View(model);
         }
     }
 }

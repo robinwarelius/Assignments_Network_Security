@@ -1,39 +1,68 @@
-﻿<!DOCTYPE html>
+﻿@using IoT_FrontEnd.Utilities;
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - IoT_FrontEnd</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/IoT_FrontEnd.styles.css" asp-append-version="true" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-controller="Unit" asp-action="Index"><i class="fa-solid fa-house fa-lg"></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-grow-1">
 
+                    <li class="nav-item">
+                        <a class="navbar-brand" asp-area="" asp-controller="Unit" asp-action="Index">Units</a>
+                    </li>
 
-    <header>      
-            <div class="container-fluid">
-            <a class="navbar-brand" asp-area="" asp-controller="Auth" asp-action="Index">Home</a>
-            <a class="navbar-brand" asp-area="" asp-controller="Unit" asp-action="Index">Enheter</a>
-            <a class="navbar-brand" asp-area="" asp-controller="Admin" asp-action="Index">Admin</a>
-            </div>         
-    </header>
+                    @if(User.IsInRole(SD.Role_Admin))
+                    {
+                        <li class="nav-item">
+                            <a class="navbar-brand text-primary" asp-area="" asp-controller="Admin" asp-action="Index">Admin</a>
+                        </li>
+                    }
+                </ul>
 
-
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    @if(!User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item">
+                            <a class="navbar-brand" asp-area="" asp-controller="Auth" asp-action="Login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navbar-brand" asp-area="" asp-controller="Auth" asp-action="Register">Register</a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <span class="navbar-brand text-primary">@User.Identity.Name</span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navbar-brand" asp-area="" asp-controller="Auth" asp-action="Logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+                        </li>                        
+                    }                                                                       
+               </ul>              
+            </div>
+        </div>
+    </nav> 
 
     <div class="container">
         <main role="main" class="pb-3">
-            @RenderBody()
+            @RenderBody()         
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 
-        </div>
-    </footer>
+  
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://kit.fontawesome.com/1172c9898d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

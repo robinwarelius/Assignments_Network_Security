@@ -26,7 +26,6 @@ namespace IoT_BackEnd.Controllers
             _unitDto = new UnitDto();
         }
 
-
         [HttpPost("CreateUnit")]
         public async Task<IActionResult> CreateUnit([FromBody] EncryptedDto encryptedDto)
         {
