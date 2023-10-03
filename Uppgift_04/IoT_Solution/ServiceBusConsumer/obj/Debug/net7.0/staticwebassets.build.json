@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "bQZM2W977mqVrH94gWbRlRSXeNUkXvAw8+OttPuIx2A=",
+  "Source": "IoT_ServiceBusConsumer",
+  "BasePath": "_content/IoT_ServiceBusConsumer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

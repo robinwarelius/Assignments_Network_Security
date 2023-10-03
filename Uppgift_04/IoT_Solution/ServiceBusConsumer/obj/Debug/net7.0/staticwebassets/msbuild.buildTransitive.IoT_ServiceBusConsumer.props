@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\IoT_ServiceBusConsumer.props" />
+</Project>

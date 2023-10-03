@@ -1,4 +1,5 @@
-﻿using IoT_BackEnd.Models.Dto;
+﻿using IoT.ServiceBus;
+using IoT_BackEnd.Models.Dto;
 using IoT_BackEnd.Services.IServices;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,11 +12,15 @@ namespace IoT_BackEnd.Controllers
     {
         private readonly ResponseDto _response;
         private readonly IAuthService _authService;
+        private readonly ServiceBus _serviceBus;
+        private readonly IConfiguration _configuration;
 
-        public AuthController(IAuthService authService)
+        public AuthController(IAuthService authService, ServiceBus serviceBus, IConfiguration configuration)
         {
             _response = new ResponseDto();
             _authService = authService;
+            _serviceBus = serviceBus;
+            _configuration = configuration;
         }
 
         [HttpPost("register")]
@@ -30,6 +35,10 @@ namespace IoT_BackEnd.Controllers
             }
             _response.Result = model;
             _response.Message = "User successfully created";
+
+            // Publish user info to service bus
+            PublishMessage(model, _configuration.GetValue<string>("TopicAndQueueNames:EmailUserInformationQueue")!, _configuration.GetValue<string>("ConnectionStringServiceBus:EmailUserInformationQueue")!);
+
             return Ok(_response);                   
         }
 
@@ -60,6 +69,11 @@ namespace IoT_BackEnd.Controllers
                 return BadRequest(_response);
             }
             return Ok(_response);
+        }
+
+        private async void PublishMessage(object content, string queue_topic_name, string connectionString)
+        {
+            await _serviceBus.PublishContent(content, queue_topic_name, connectionString);
         }
     }
 }

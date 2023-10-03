@@ -1,0 +1,13 @@
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_04\IoT_Solution\IoT.ServiceBus\bin\Debug\net7.0\IoT.ServiceBus.deps.json
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_04\IoT_Solution\IoT.ServiceBus\bin\Debug\net7.0\IoT.ServiceBus.dll
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_04\IoT_Solution\IoT.ServiceBus\bin\Debug\net7.0\IoT.ServiceBus.pdb
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_04\IoT_Solution\IoT.ServiceBus\obj\Debug\net7.0\IoT.ServiceBus.csproj.AssemblyReference.cache
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_04\IoT_Solution\IoT.ServiceBus\obj\Debug\net7.0\IoT.ServiceBus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_04\IoT_Solution\IoT.ServiceBus\obj\Debug\net7.0\IoT.ServiceBus.AssemblyInfoInputs.cache
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_04\IoT_Solution\IoT.ServiceBus\obj\Debug\net7.0\IoT.ServiceBus.AssemblyInfo.cs
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_04\IoT_Solution\IoT.ServiceBus\obj\Debug\net7.0\IoT.ServiceBus.csproj.CoreCompileInputs.cache
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_04\IoT_Solution\IoT.ServiceBus\obj\Debug\net7.0\IoT.ServiceBus.sourcelink.json
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_04\IoT_Solution\IoT.ServiceBus\obj\Debug\net7.0\IoT.ServiceBus.dll
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_04\IoT_Solution\IoT.ServiceBus\obj\Debug\net7.0\refint\IoT.ServiceBus.dll
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_04\IoT_Solution\IoT.ServiceBus\obj\Debug\net7.0\IoT.ServiceBus.pdb
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_04\IoT_Solution\IoT.ServiceBus\obj\Debug\net7.0\ref\IoT.ServiceBus.dll

@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.33906.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoT_FrontEnd", "IoT_FrontEnd\IoT_FrontEnd.csproj", "{99BE1B5B-CD92-428C-B42A-724CBE31DF18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IoT_FrontEnd", "IoT_FrontEnd\IoT_FrontEnd.csproj", "{99BE1B5B-CD92-428C-B42A-724CBE31DF18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoT_BackEnd", "IoT_BackEnd\IoT_BackEnd.csproj", "{9D1ED8F7-00E9-4B78-AB0C-CA7D0E542124}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IoT_BackEnd", "IoT_BackEnd\IoT_BackEnd.csproj", "{9D1ED8F7-00E9-4B78-AB0C-CA7D0E542124}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoT_Unit", "IoT_Unit\IoT_Unit.csproj", "{33D84CE8-4F4E-415B-91D7-574942D2B5EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IoT_Unit", "IoT_Unit\IoT_Unit.csproj", "{33D84CE8-4F4E-415B-91D7-574942D2B5EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoT_ServiceBus", "IoT.ServiceBus\IoT_ServiceBus.csproj", "{47C71BFF-D898-484C-8E7C-EA7DEB336121}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoT_ServiceBusConsumer", "ServiceBusConsumer\IoT_ServiceBusConsumer.csproj", "{CF7327CB-B4AA-4CAB-934F-2EBC4B64C72F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{33D84CE8-4F4E-415B-91D7-574942D2B5EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33D84CE8-4F4E-415B-91D7-574942D2B5EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33D84CE8-4F4E-415B-91D7-574942D2B5EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47C71BFF-D898-484C-8E7C-EA7DEB336121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47C71BFF-D898-484C-8E7C-EA7DEB336121}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47C71BFF-D898-484C-8E7C-EA7DEB336121}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47C71BFF-D898-484C-8E7C-EA7DEB336121}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF7327CB-B4AA-4CAB-934F-2EBC4B64C72F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF7327CB-B4AA-4CAB-934F-2EBC4B64C72F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF7327CB-B4AA-4CAB-934F-2EBC4B64C72F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF7327CB-B4AA-4CAB-934F-2EBC4B64C72F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

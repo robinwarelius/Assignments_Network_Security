@@ -69,7 +69,7 @@ namespace IoT_FrontEnd.Controllers
                     ResponseDto assignRole = await _authService.AssignRoleAsync(model);
 
                     if (assignRole.IsSuccess && assignRole != null)
-                    {                     
+                    {   
                         return RedirectToAction(nameof(Login));
                     }              
             }        

@@ -1,5 +1,6 @@
 
 
+using IoT.ServiceBus;
 using IoT_BackEnd.Data;
 using IoT_BackEnd.Hubs;
 using IoT_BackEnd.Models;
@@ -36,6 +37,7 @@ builder.Services.AddTransient<IAuthService, AuthService>();
 builder.Services.AddTransient<ITokenJwtGenerator, TokenJwtGenerator>();
 builder.Services.AddTransient<IAdminService, AdminService>();
 builder.Services.AddTransient<IAdminRepository, AdminRepository>();
+builder.Services.AddTransient<ServiceBus, ServiceBus>();
 
 // Cors
 builder.Services.AddCors(options =>

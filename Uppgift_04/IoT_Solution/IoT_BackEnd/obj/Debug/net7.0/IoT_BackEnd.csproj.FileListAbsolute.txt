@@ -82,3 +82,9 @@ C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säker
 C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_04\IoT_Solution\IoT_BackEnd\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_04\IoT_Solution\IoT_BackEnd\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
 C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_04\IoT_Solution\IoT_BackEnd\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_04\IoT_Solution\IoT_BackEnd\bin\Debug\net7.0\Azure.Core.Amqp.dll
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_04\IoT_Solution\IoT_BackEnd\bin\Debug\net7.0\Azure.Messaging.ServiceBus.dll
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_04\IoT_Solution\IoT_BackEnd\bin\Debug\net7.0\Microsoft.Azure.Amqp.dll
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_04\IoT_Solution\IoT_BackEnd\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_04\IoT_Solution\IoT_BackEnd\bin\Debug\net7.0\IoT_ServiceBus.dll
+C:\Users\Robin\OneDrive\Skrivbord\Nackademin-Kurser\Datakommunikation_och_säkerhet\Assignments\Uppgift_04\IoT_Solution\IoT_BackEnd\bin\Debug\net7.0\IoT_ServiceBus.pdb
