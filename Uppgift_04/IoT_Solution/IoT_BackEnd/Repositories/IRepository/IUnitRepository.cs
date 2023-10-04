@@ -9,6 +9,7 @@ namespace IoT_BackEnd.Repositories.IRepository
         Task<Unit> UpdateUnit(Unit unit);
         Task <Unit> GetUnitByName(string identifier);
         Task<Unit> GetUnitById(int Id);
+        Task<Unit> GetLastCreatedUnit();
         Task<bool> DeleteUnitById(int Id);
     }
 }

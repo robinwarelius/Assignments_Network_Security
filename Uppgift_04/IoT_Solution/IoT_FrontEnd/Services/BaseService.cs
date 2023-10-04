@@ -21,6 +21,7 @@ namespace IoT_FrontEnd.Services
             _tokenProvider = tokenProvider;
         }
 
+        // Basklass för att hantera rest anrop via http
         public async Task<ResponseDto?> SendAsync(RequestDto requestDto, bool withBearer = true)
         {
             try

@@ -27,6 +27,7 @@ namespace IoT_BackEnd.Controllers
         }
 
         [HttpPost("CreateUnit")]
+        // Dekrypterar det mottagna objektet, trycker in i databasen och skickar till frontend systemet via min Hub
         public async Task<IActionResult> CreateUnit([FromBody] EncryptedDto encryptedDto)
         {
             try
@@ -53,6 +54,9 @@ namespace IoT_BackEnd.Controllers
                 return BadRequest(ex.Message.ToString());
             }
         }
+
+
+        // <---**---> Metoderna nedanför används inte <---**--->
 
         [HttpPost("DeleteUnitById")]
         public async Task <IActionResult> DeleteUnitById (int id)

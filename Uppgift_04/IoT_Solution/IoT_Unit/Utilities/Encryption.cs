@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace IoT_Unit.Utilities
 {
+    // Krypterar min data
     public static class Encryption
     {
         public static EncryptedDto EncryptData(string data_to_encrypt)

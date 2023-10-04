@@ -15,6 +15,7 @@ namespace IoT_FrontEnd.Services
             _baseService = baseService;
         }
 
+        // Skickar användaren roll till backendsystemet via http
         public async Task<ResponseDto?> AssignRoleAsync(RegistrationRequestDto registrationRequestDto)
         {
             return await _baseService.SendAsync(new RequestDto()
@@ -25,6 +26,7 @@ namespace IoT_FrontEnd.Services
             }, withBearer:false);                     
         }
 
+        // Skickar användaren inloggninsuppgifter till backendsystemet via http
         public async Task<ResponseDto?> LoginAsync(LoginRequestDto loginRequestDto)
         {
             return await _baseService.SendAsync(new RequestDto()
@@ -35,6 +37,7 @@ namespace IoT_FrontEnd.Services
             }, withBearer: false);
         }
 
+        // Skickar användaren registrering till backendsystemet via http
         public async Task<ResponseDto?> RegisterAsync(RegistrationRequestDto registrationRequestDto)
         {
             return await _baseService.SendAsync(new RequestDto()

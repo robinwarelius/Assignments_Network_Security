@@ -13,6 +13,7 @@ namespace IoT_FrontEnd.Controllers
             _advertService = advertService;
         }
 
+        // Hämtar upp senaste annonsen och skickar till startvy
         public async Task <IActionResult> Index()
         {          
                 ResponseDto? result = await _advertService.GetLatestAdvertAsync();

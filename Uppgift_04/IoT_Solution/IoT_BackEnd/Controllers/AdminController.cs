@@ -20,6 +20,7 @@ namespace IoT_BackEnd.Controllers
             _response = new ResponseDto();
         }
 
+        // Om användaren är inloggad som admin kan hen skapa en annons som sedan kan visas på startsidan i frontend systemet
         [HttpPost("CreateAdvert")]
         [Authorize]
         public async Task <IActionResult> CreateAdvert(AdvertDto model)
@@ -47,6 +48,7 @@ namespace IoT_BackEnd.Controllers
                        
         }
 
+        // Här hämtar jag upp den senaste skapade annonsen som frontend systemet användaren på sin startsida
         [HttpGet("GetLatestAdvert")]
         public async Task <IActionResult> GetLatestAdvert()
         {

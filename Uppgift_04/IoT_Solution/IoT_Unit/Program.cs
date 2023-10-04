@@ -6,12 +6,13 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
+// Simulerat en enhet med random nummer från 1-20
 while (true)
 {
     Random random = new Random();
     string secretValue = $"Thermometer,Great For you're House,{random.Next(1, 20).ToString()}";
     string apiUrl = "https://localhost:7080/api/unit/CreateUnit";
-    await API_Communication.SendAsync(apiUrl, secretValue);
+    await ApiBase.SendAsync(apiUrl, secretValue);
     await Task.Delay(5000);
 }
 

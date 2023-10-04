@@ -13,6 +13,7 @@ namespace IoT_BackEnd.Services
             _repoAdmin = repoAdmin;
         }
 
+        // Inloggad användare (som admin) kan skapa en annons
         public async Task<bool> CreateAdvert(AdvertDto advertDto)
         {
             if(advertDto != null) 
@@ -28,6 +29,7 @@ namespace IoT_BackEnd.Services
             return false;
         }
 
+        // Hämtar senaste annonsen baserat på datum
         public async Task<Advertising> GetLatestAdvert()
         {
             return await _repoAdmin.GetLatestAdvert();

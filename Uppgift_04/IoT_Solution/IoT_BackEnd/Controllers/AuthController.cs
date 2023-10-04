@@ -23,6 +23,7 @@ namespace IoT_BackEnd.Controllers
             _configuration = configuration;
         }
 
+        // Registrerar användare
         [HttpPost("register")]
         public async Task<IActionResult> Register ([FromBody]RegistrationRequestDto model)
         {
@@ -36,12 +37,13 @@ namespace IoT_BackEnd.Controllers
             _response.Result = model;
             _response.Message = "User successfully created";
 
-            // Publish user info to service bus
+            // Skickar registrerad användare till min service bus på Azure (ville prova på)
             PublishMessage(model, _configuration.GetValue<string>("TopicAndQueueNames:EmailUserInformationQueue")!, _configuration.GetValue<string>("ConnectionStringServiceBus:EmailUserInformationQueue")!);
 
             return Ok(_response);                   
         }
 
+        // Användaren loggar in
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequestDto model)
         {
@@ -58,6 +60,7 @@ namespace IoT_BackEnd.Controllers
             return Ok(_response);
         }
 
+        // Ger användaren en roll
         [HttpPost("AssignRole")]
         public async Task<IActionResult> AssignRole([FromBody] RegistrationRequestDto model)
         {
@@ -71,6 +74,7 @@ namespace IoT_BackEnd.Controllers
             return Ok(_response);
         }
 
+        // Service Bus
         private async void PublishMessage(object content, string queue_topic_name, string connectionString)
         {
             await _serviceBus.PublishContent(content, queue_topic_name, connectionString);

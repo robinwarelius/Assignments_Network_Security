@@ -9,8 +9,13 @@ connection.on("updateTotalViews", (value) => {
     newCountSpan.innerText = value.toString();
 })
 
-connection.on("updateUnit", (name, description, temperature) => {
+connection.on("updateTotalConnections", (value) => {
+    var newCountSpan = document.getElementById("amountConnections");
+    newCountSpan.innerText = value.toString();
+})
 
+
+connection.on("updateUnit", (name, description, temperature) => {
     var nameElement = document.getElementById("nameUnit");
     var descriptionElement = document.getElementById("descriptionUnit");
     var temperatureElement = document.getElementById("temperatureUnit");

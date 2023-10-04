@@ -4,6 +4,7 @@ using IoT_FrontEnd.Services;
 using IoT_FrontEnd.Utilities;
 using Microsoft.AspNetCore.Authentication.Cookies;
 
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
@@ -31,6 +32,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.LoginPath = "/Auth/Login"; 
         options.AccessDeniedPath = "/Auth/AccessDenied"; 
     });
+
 
 var app = builder.Build();
 if (!app.Environment.IsDevelopment())

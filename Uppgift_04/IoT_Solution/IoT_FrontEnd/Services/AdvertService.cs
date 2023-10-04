@@ -15,6 +15,7 @@ namespace IoT_FrontEnd.Services
             _baseService = baseService;
         }
 
+        // Postar annons via http till backend systemet 
         public async Task<ResponseDto> CreateAdvertAsync(AdvertDto advertDto)
         {
             return await _baseService.SendAsync(new RequestDto()
@@ -25,6 +26,7 @@ namespace IoT_FrontEnd.Services
             });
         }
 
+        // Hämtar annons via http från backend systemet 
         public async Task<ResponseDto> GetLatestAdvertAsync()
         {
             return await _baseService.SendAsync(new RequestDto()

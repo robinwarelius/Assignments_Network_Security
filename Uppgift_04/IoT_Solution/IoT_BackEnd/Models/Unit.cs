@@ -9,5 +9,6 @@ namespace IoT_BackEnd.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public string Temperature { get; set; }
+        public DateTime DateTime { get; set; } = DateTime.Now;
     }
 }

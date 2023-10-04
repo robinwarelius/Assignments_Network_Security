@@ -7,6 +7,7 @@ using System.Text.Json.Serialization;
 
 namespace IoT_ServiceBusConsumer.Messaging
 {
+    // Läser meddelade som hamnar på min service bus på azure
     public class AzureServiceBusConsumer : IAzureServiceBusConsumer
     {
         // registration

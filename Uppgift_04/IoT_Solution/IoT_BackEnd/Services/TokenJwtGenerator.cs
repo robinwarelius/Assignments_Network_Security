@@ -18,6 +18,7 @@ namespace IoT_BackEnd.Services
             _jwtOptions = jwtOptions.Value;
         }
 
+        // Genererar token
         public string GenerateJwtToken(ApplicationUser applicationUser, IEnumerable<string> roles)
         {
             var token_handler = new JwtSecurityTokenHandler();

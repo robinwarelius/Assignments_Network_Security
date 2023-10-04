@@ -26,6 +26,7 @@ namespace IoT_FrontEnd.Controllers
         }
 
         [HttpPost]
+        // Loggar in användaren & placerar token som cookie 
         public async Task<IActionResult> Login(LoginRequestDto model)
         {
             ResponseDto? response = await _authService.LoginAsync(model);
@@ -41,6 +42,7 @@ namespace IoT_FrontEnd.Controllers
             return View(model);
         }
 
+        // Följande två metoder registrar en användare och ger hen en roll (admin eller customer)
         [HttpGet]
         public async Task<IActionResult> Register()
         {
@@ -91,13 +93,14 @@ namespace IoT_FrontEnd.Controllers
             return RedirectToAction("Index", "Unit");
         }
       
+        // Loggar in användaren med .net inbyggda system
         private async Task SignInUser(LoginResponseDto model)
         {
-            // Read token
+            // Läser token
             var handler = new JwtSecurityTokenHandler();
             var jwt = handler.ReadJwtToken(model.Token);
 
-            // Add claims from token
+            // Addar claims från token
             var identity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme);
             identity.AddClaim(new Claim(JwtRegisteredClaimNames.Email, jwt.Claims.FirstOrDefault(u => u.Type == JwtRegisteredClaimNames.Email).Value));
             identity.AddClaim(new Claim(JwtRegisteredClaimNames.Sub, jwt.Claims.FirstOrDefault(u => u.Type == JwtRegisteredClaimNames.Sub).Value));
@@ -105,7 +108,7 @@ namespace IoT_FrontEnd.Controllers
             identity.AddClaim(new Claim(ClaimTypes.Name, jwt.Claims.FirstOrDefault(u => u.Type == JwtRegisteredClaimNames.Email).Value));
             identity.AddClaim(new Claim(ClaimTypes.Role, jwt.Claims.FirstOrDefault(u => u.Type == "role").Value));
 
-            // Sign in the user
+            // Loggar in användaren
             var pricipal = new ClaimsPrincipal(identity);
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, pricipal);
         }

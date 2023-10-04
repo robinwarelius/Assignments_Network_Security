@@ -15,6 +15,7 @@ namespace IoT_BackEnd.Services
             _repo = repo;
         }
 
+        // Skickar simulerad enhet till repo som sen ansvarar för databaskommunikationen
         public async Task<UnitDto> CreateUnit(UnitDto? unitDto)
         {
             if(unitDto != null)
@@ -44,6 +45,9 @@ namespace IoT_BackEnd.Services
             return null;                         
         }
 
+
+        //<--**--> Metoderna nedanför används ej <--**-->
+
         public async Task<bool> DeleteUnitById(int Id)
         {
             bool isSuccess = await _repo.DeleteUnitById(Id);
@@ -60,7 +64,16 @@ namespace IoT_BackEnd.Services
             return null;              
         }
 
-       
+        public async Task<UnitDto> GetLastCreatedUnit()
+        {
+            Unit unit = await _repo.GetLastCreatedUnit();
+            if (unit != null)
+            {
+                return await Factory.Create_UnitDto(unit);
+            }
+            return null;
+        }
+
         public async Task<UnitDto> GetUnitByName(string identifier)
         {
             Unit unit = await _repo.GetUnitByName(identifier);

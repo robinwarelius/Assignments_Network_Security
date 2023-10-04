@@ -19,6 +19,7 @@ namespace IoT_FrontEnd.Controllers
         }
 
         [HttpPost]
+        // Admin kan skapa en annons som hamnar på första sidan
         public async Task <IActionResult> Index(AdvertDto model)
         {
             ResponseDto result = await _advertService.CreateAdvertAsync(model);

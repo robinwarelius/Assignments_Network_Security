@@ -21,6 +21,7 @@ namespace IoT_BackEnd.Services
             _tokenGenerator = tokenGenerator;
         }
 
+        // Ger användaren en roll (admin eller customer)
         public async Task<bool> AssignRole(string email, string roleName)
         {
             var user = _db.ApplicationUsers.FirstOrDefault(item => item.Email.ToLower() == email.ToLower());
@@ -37,6 +38,7 @@ namespace IoT_BackEnd.Services
             return false;
         }
 
+        // Loggar in användaren och genererar en token
         public async Task<LoginResponseDto> Login(LoginRequestDto loginRequestDto)
         {
             var user = _db.ApplicationUsers.FirstOrDefault(item => item.UserName.ToLower() == loginRequestDto.UserName.ToLower());
@@ -66,6 +68,7 @@ namespace IoT_BackEnd.Services
             return loginResponseDto;
         }
 
+        // Registrerar användaren
         public async Task<string> Register(RegistrationRequestDto registrationRequestDto)
         {
             ApplicationUser user = new ApplicationUser()

@@ -11,6 +11,7 @@ namespace IoT.ServiceBus
 {
     public class ServiceBus : IServiceBus
     {      
+        // Skickar meddelande till min service bus på azure
         public async Task PublishContent(object content, string queue_topic_name, string connectionString)
         {
             await using var client_service_bus = new ServiceBusClient(connectionString);

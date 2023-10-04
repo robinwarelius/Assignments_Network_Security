@@ -14,6 +14,7 @@ namespace IoT_BackEnd.Repositories
             _db = db;
         }
 
+        // Skapa annons (admin)
         public async Task<bool> CreateAdvert(Advertising model)
         {
             _db.Advertisings.Add(model);
@@ -21,6 +22,7 @@ namespace IoT_BackEnd.Repositories
             return true;
         }
 
+        // Hämta senaste annons baserat på datum
         public async Task<Advertising> GetLatestAdvert()
         {
            return _db.Advertisings.OrderByDescending(item => item.CreatedDate).FirstOrDefault()!;                   

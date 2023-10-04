@@ -3,6 +3,7 @@ using System.Security.Cryptography;
 
 namespace IoT_BackEnd.Utilities
 {
+    // Dekrypterar min data
     public static class Decryption
     {
         public static async Task <string> DecryptData (EncryptedDto encryptedDto)
