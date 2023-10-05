@@ -14,7 +14,7 @@ namespace IoT_Unit.Utilities
         // Skickar ett krypterat objekt via http till mitt backend system
         public static async Task SendAsync(string apiUrl, string secretValue)
         {
-            EncryptedDto encryptedDto = Encryption.EncryptData(secretValue);
+            EncryptedDto encryptedDto = Encryption.EncryptData(secretValue); // Krypterar objektet
             using (HttpClient httpClient = new HttpClient())
             {            
                 HttpRequestMessage message = new HttpRequestMessage();
